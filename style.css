@@ -6,15 +6,11 @@
     -moz-osx-font-smoothing: grayscale;
     font-family: Roboto, sans-serif;
 
-
-
     --darkGray: #424242;
     --lightGray: #9a9a9a;
 }
 
-
 body {
-    background-color: #ffffff;
     display: grid;
     justify-content: center;
     margin: 30px;
@@ -56,7 +52,6 @@ div{
     justify-content: space-between;
     align-items: center;
     margin: 0.5rem 0.3rem;
-
 }
 label {
     font-size: 15px;
@@ -85,4 +80,3 @@ button {
     color: white;
     background-color: #125db3;
 } 
-
