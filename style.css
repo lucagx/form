@@ -8,23 +8,26 @@
 
     --darkGray: #424242;
     --lightGray: #9a9a9a;
+    --green: #1eb283;
+    --gray: #d4d4d4;
 }
 
 body {
-    display: grid;
-    justify-content: center;
-    margin: 30px;
+    width: 60%;
+    margin: auto;
+    background-color: white;
+    padding: 0px 20px;
 }
 
 .heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 700 ;
     color: var(--darkGray);
 }
@@ -32,51 +35,96 @@ h2 {
 hr {
     border-top: 3px solid var(--darkGray);
 }
- 
+
 legend {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 700;
     color: var(--darkGray);
     margin-left: 10px;
+    
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
 }
 
 fieldset {
     border: 1px solid var(--lightGray);
-    background-color: #d4d4d4;
-    margin: 15px;
-    padding: 12px;
+    background-color: var(--gray);
+    margin: 20px;
+    padding: 15px;
 }
 
-div{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0.5rem 0.3rem;
-}
+
 label {
-    font-size: 15px;
-    font-weight: 500;
-    align-self: center;
     color: var(--darkGray);
-    margin: 8px;
+    font-size: 16px;
+    margin: 10px;
+    display: inline-block;
+    width: 15%;
+    text-align: right;
 }
 
 .form input, select, #dataN, #imageP::file-selector-button, button {
-    padding: 5px;
+    padding: 10px;
     border: 1px solid var(--lightGray);
     border-radius: 0.3rem; 
+    height: 35px;
 }
 
 #imageP::file-selector-button , button{
-        cursor: pointer;
+    cursor: pointer;
 }
 
 #dataN {
     cursor: text;
 }
 
+#imageP {
+    width: 300px;
+}
+
+#send {
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+}
+
 button {
-    font-size: 15px;
-    color: white;
-    background-color: #125db3;
-} 
+  outline:none;
+  height: 40px;
+  text-align: center;
+  width: 130px;
+  margin: 10px;
+  border-radius:40px;
+  background: #fff;
+  border: 2px solid var(--green);
+  color:var(--green);
+  letter-spacing:1px;
+  text-shadow:0;
+  font-size:12px bold; 
+  cursor: pointer;
+  transition: all 0.25s ease;
+  &:hover {
+    color:white;
+    background: var(--green);
+  }
+  &:active {
+    letter-spacing: 2px;
+    letter-spacing: 2px ;
+  }
+}
+footer {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+    padding: 10px;
+    background: #eeeeee;
+    margin: 0px 20px;
+}
+
+a:link {color:var(--darkGray);text-decoration:none;}
+a:visited {color:var(--green);text-decoration:none;}
+a:hover {text-decoration:underline;}
